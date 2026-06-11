@@ -1,0 +1,127 @@
+/* assets/style.css
+   Estilos globales del dashboard de Employee Attrition
+   Complementa Bootstrap con ajustes de diseño pastel y tipografía Inter
+*/
+
+/* ── Tipografía base ─────────────────────────────────────────────────────── */
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #F7F9FC;
+  color: #2D3748;
+}
+
+/* ── Scrollbar personalizado ─────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F9FC;
+}
+::-webkit-scrollbar-thumb {
+  background: #A8C8E8;
+  border-radius: 10px;
+}
+
+/* ── Tabs: eliminar fondo blanco por defecto de dbc.Tabs ─────────────────── */
+.nav-tabs {
+  border-bottom: none !important;
+}
+
+.nav-tabs .nav-link {
+  border: none !important;
+  background: transparent !important;
+  transition: all 0.2s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  background: #A8C8E822 !important;
+  border-radius: 10px 10px 0 0 !important;
+}
+
+/* ── Sliders de Dash: personalizar color de la barra ─────────────────────── */
+.rc-slider-track {
+  background-color: #A8C8E8 !important;
+}
+.rc-slider-handle {
+  border-color: #A8C8E8 !important;
+  box-shadow: 0 0 0 4px #A8C8E844 !important;
+}
+.rc-slider-handle:hover,
+.rc-slider-handle:active {
+  border-color: #7aaed8 !important;
+}
+
+/* ── Badges de texto ─────────────────────────────────────────────────────── */
+.badge {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* ── Cards: transición suave en hover ────────────────────────────────────── */
+.card {
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10) !important;
+}
+
+/* ── Botón primario personalizado ────────────────────────────────────────── */
+.btn-primary {
+  background-color: #A8C8E8 !important;
+  border-color: #A8C8E8 !important;
+  color: #2D3748 !important;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: #7aaed8 !important;
+  border-color: #7aaed8 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(168, 200, 232, 0.5) !important;
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* ── Select de Dash Bootstrap ────────────────────────────────────────────── */
+select.form-select {
+  border: 1.5px solid #A8C8E8 !important;
+  border-radius: 10px !important;
+  font-size: 0.9rem;
+  color: #2D3748;
+  background-color: #FFFFFF;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+select.form-select:focus {
+  border-color: #7aaed8 !important;
+  box-shadow: 0 0 0 3px rgba(168, 200, 232, 0.35) !important;
+  outline: none;
+}
+
+/* ── Animación de entrada para cards ─────────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeInUp 0.3s ease both;
+}
+
+/* ── Tooltip de Dash sliders ─────────────────────────────────────────────── */
+.rc-slider-tooltip-inner {
+  background-color: #2D3748 !important;
+  border-radius: 6px !important;
+  font-size: 0.78rem !important;
+  padding: 3px 8px !important;
+}
